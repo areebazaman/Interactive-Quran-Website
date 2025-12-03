@@ -1,0 +1,228 @@
+/* === General Container === */
+.verses-container {
+  background: #fdfdfd;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+}
+
+/* === Juz Title === */
+.juz-title {
+  margin-top: 70px;
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* === Search Bar Container === */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* === Search Input === */
+.search-bar {
+  width: 220px;
+  padding: 10px 16px;
+  border: 1px solid #707072;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #2c3e50;
+  box-shadow: 0px 0px 8px rgba(0, 91, 187, 0.5);
+}
+
+/* === Loading & Error Text === */
+.loading-text,
+.error-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d63031;
+  margin-top: 20px;
+}
+
+/* === Surah Name === */
+.surah-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #154360;
+  background: #e3f2fd;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === Verses Container === */
+.verse-block {
+  background: #ffffff;
+  padding: 18px 24px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 85%;
+  text-align: right;
+  border-left: 5px solid #2980b9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.verse-block:hover {
+  transform: translateY(-5px);
+}
+
+/* === Verse Line === */
+.verse-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+/* === Verse Number === */
+.verse-number {
+  font-weight: bold;
+  color: #2980b9;
+  background: #e3f2fd;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  margin-left: 12px;
+}
+
+/* === Arabic Verse Text === */
+.verse-text {
+  font-size: 1.8rem;
+  color: #111;
+  font-weight: 600;
+  font-family: 'Amiri', 'Noto Naskh Arabic', 'Scheherazade', serif;
+  direction: rtl;
+  line-height: 2.4;
+  text-align: right;
+}
+
+/* === Translation === */
+.verse-translation {
+  font-size: 1.1rem;
+  color: #444;
+  background: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 12px;
+  border-left: 4px solid #16a085;
+  text-align: left;
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  line-height: 1.7;
+}
+
+/* === Translation Controls === */
+.translation-dropdown {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 80px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.translation-dropdown select {
+  padding: 10px 18px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.translation-dropdown select:hover {
+  border-color: #4e8e8b;
+}
+
+.short-button {
+  background-color: #e3f2fd;
+  color: #000;
+  font-size: 1rem;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.short-button:hover {
+  background-color: #cae5f8;
+  transform: scale(1.05);
+}
+
+.short-button:active {
+  transform: scale(0.96);
+}
+
+/* === Responsive Styling === */
+@media (max-width: 768px) {
+  .juz-title {
+    font-size: 2rem;
+  }
+
+  .verse-text {
+    font-size: 1.5rem;
+    line-height: 2.2;
+  }
+
+  .translation-dropdown {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .verse-block {
+    max-width: 95%;
+  }
+
+  .translation-dropdown select {
+    font-size: 0.95rem;
+  }
+
+  .short-button {
+    font-size: 0.95rem;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .juz-title {
+    font-size: 1.7rem;
+  }
+
+  .verse-text {
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+
+  .verse-number {
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 300px;
+  }
+}

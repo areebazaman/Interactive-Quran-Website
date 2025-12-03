@@ -1,0 +1,108 @@
+/* Carousel Container */
+.carousel-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 50, 0.6)), 
+      url('../images/ds.jpg'); /* Replace with your image */
+      
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Carousel Card */
+  .carousel-card {
+    width: 90%;
+    max-width: 800px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+  }
+  
+  /* Fade animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Navigation Buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.1rem;
+    color: #ffffff;
+    background-color: rgba(26, 164, 228, 0.4);
+    border: none;
+    padding: 1px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-btn.prev {
+    left: 20px;
+  }
+  
+  .carousel-btn.next {
+    right: 20px;
+  }
+  
+  /* Dots Navigation */
+  .carousel-dots {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-dot:hover {
+    background-color: #fff;
+  }
+  
+  .carousel-dot.active {
+    background-color: #f39c12;
+    width: 14px;
+    height: 14px;
+  }
+  

@@ -1,0 +1,344 @@
+/* Main container styling */
+.surah-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Surah Header (Title + Navigation) */
+.surah-header {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.surah-title {
+  margin-top: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 20px;
+  color: #333;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.basmala {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 20px;
+  color: #2c3e50;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  background: linear-gradient(135deg, #fff, #fff);
+  color: rgb(3, 0, 0);
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(251, 251, 252, 0.959);
+}
+
+.nav-button:hover {
+  background: #34495e;
+}
+
+.nav-button:disabled {
+  background: #fff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Search & Language Selection */
+.search-language-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  gap: 10px;
+  
+}
+
+.search-input {
+  padding: 10px 40px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search-button {
+  position: absolute;
+  right: 50px;
+  top: 10%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.search-button svg {
+  fill: #2c3e50;
+  width: 20px;
+  height: 20px;
+}
+
+/* Styling for pronunciation correctness */
+.diacritic-mistake {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Verse block styling */
+.verse-block {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* Recitation buttons container */
+.recite-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Microphone Buttons */
+.mic-button {
+  padding: 10px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 60px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Start Button */
+.mic-button.start {
+  background: linear-gradient(135deg, #28a745, #1f7a35);
+  color: white;
+}
+
+.mic-button.start:hover {
+  background: linear-gradient(135deg, #1f7a35, #155d28);
+}
+
+.mic-button.start.recording {
+  background: linear-gradient(135deg, #1f7a35, #155d28);
+}
+
+/* Stop Button */
+.mic-button.stop {
+  background: linear-gradient(135deg, #dc3545, #a71c2c);
+  color: white;
+}
+
+.mic-button.stop:hover {
+  background: linear-gradient(135deg, #a71c2c, #7a131f);
+}
+
+/* Disabled Button */
+.mic-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Microphone icons */
+.mic-icon {
+  font-size: 20px;
+}
+
+/* Language Dropdown */
+.language-select {
+  flex: 1;
+  max-width: 300px;
+}
+
+/* Surah List */
+.surah-list {
+  list-style: none;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Verses Section */
+.verses-container {
+  width: 100%;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Arabic Text */
+.arabic-text {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right;
+  color: #222;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Translation */
+.translation-text {
+  font-size: 18px;
+  color: #555;
+  margin-top: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Audio Button */
+.audio-button {
+  background: linear-gradient(135deg, #2c3e50, #1a252f);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 16px;
+  border-radius: 80px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.audio-button:hover {
+  background: linear-gradient(135deg, #1a252f, #0d161f);
+  transform: scale(1.05);
+}
+
+.audio-button:active {
+  transform: scale(0.95);
+}
+
+.audio-icon {
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-language-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .search-bar-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .search-bar,
+  .language-select {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .verses-container {
+    padding: 15px;
+  }
+
+  .arabic-text {
+    font-size: 20px;
+  }
+
+  .translation-text {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .mic-button {
+    padding: 10px 14px;
+  }
+}
+
+/* Comparison Results for Correctness */
+.comparison-result {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.word {
+  margin-right: 8px;
+}
+
+.spoken-correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+/* Word-level Highlighting */
+.correct-word {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect-word {
+  color: red;
+  font-weight: bold;
+}
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+
+}
+
+.search-input-q {
+  width: 100%;
+  padding: 10px 10px 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  max-width: 300px;
+}
+
+.mic-inside-input {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: green;
+  font-size: 20px;
+}
+

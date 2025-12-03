@@ -1,0 +1,77 @@
+.hadith-container {
+    font-family: 'Poppins', sans-serif;
+    
+    margin: 0 auto;
+    background: transparent; /* Transparent background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    top: 0; /* Reset if not needed */
+    box-shadow: none; /* Remove any shadow */
+    border-radius: 0;  /* Optional */
+}
+
+/* Title Styling */
+.hadith-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+/* Hadith Text */
+.hadith-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    max-width: 90%;
+    line-height: 2rem;
+}
+
+/* Refresh Button (Shared style with Ayah) */
+.refresh-btn {
+    background: #34495e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.refresh-btn:hover {
+    background-color: #2c3e50;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .hadith-container {
+        height: auto;
+        padding: 20px;
+        top: 0;
+    }
+
+    .hadith-title {
+        font-size: 18px;
+    }
+
+    .hadith-text {
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+
+    .refresh-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

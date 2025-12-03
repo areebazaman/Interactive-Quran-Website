@@ -1,0 +1,115 @@
+/* Container */
+.juz-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Search Bar Styling */
+  .search-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    width: 270px;
+    padding: 12px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    box-sizing: border-box;
+    transition: width 0.3s ease;
+  }
+  
+  .search-bar:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Grid of Juz Cards */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Show 5 cards per row */
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+  }
+  
+  /* Juz Card Styling */
+  .juz-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .juz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Juz Text Styling */
+  .juz-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #297c34;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .juz-name-arabic {
+    font-size: 1.5rem;
+    color: #01070e;
+    margin: 5px 0;
+    font-family: 'Amiri', serif;
+    direction: rtl;
+  }
+  
+  .juz-name-english {
+    font-size: 1rem;
+    color: #6c757d;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  /* Loading Text */
+  .loading-text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search-bar {
+      width: 200px;
+    }
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .search-bar {
+      width: 150px;
+    }
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

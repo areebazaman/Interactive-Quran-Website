@@ -1,0 +1,191 @@
+/* Page Background */
+.adhkar-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom right, #e0f2f1, #e1f5fe);
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 50, 0.5)),
+    url('../images/ds.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Heading */
+.adhkar-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Centered Glass Card */
+.adhkar-card {
+  width: 85%;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout: 4 Square Cards per Row */
+.adhkar-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+/* List of Duas - One per row */
+.adhkar-dua-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+
+/* Square Category Buttons (Smaller Size) */
+.adhkar-list button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 30px; /* reduced from 56px */
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.25);
+  transition: transform 0.2s ease, background 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.adhkar-list button:hover {
+  transform: translateY(-3px);
+  background: #2c3e50;
+}
+
+/* Category Title */
+.category-title {
+  text-align: center;
+  margin-bottom: 70px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+
+/* Back Button */
+.back-button {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 12px 25px;
+  background-color: #2c3e50;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(44, 82, 117, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #232b35;
+  transform: scale(1.05);
+}
+
+/* Adhkar Item Box */
+.adhkar-item {
+  background-color:rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  color: #f7f8f8;
+  box-shadow: 0 3px 10px rgba(0, 150, 136, 0.1);
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color:white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 34px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #1a252f;
+}
+
+
+/* Responsive Grid for Category Buttons */
+@media (max-width: 1200px) {
+  .adhkar-list {
+    grid-template-columns: repeat(3, 1fr); /* for tablets/laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  .adhkar-list {
+    grid-template-columns: repeat(2, 1fr); /* for large phones/tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .adhkar-list {
+    grid-template-columns: 1fr; /* for small phones */
+  }
+
+  .adhkar-heading {
+    font-size: 24px;
+  }
+
+  .category-title {
+    font-size: 28px;
+  }
+
+  .adhkar-list button {
+    font-size: 20px;
+  }
+
+  .adhkar-item {
+    font-size: 20px;
+  }
+}

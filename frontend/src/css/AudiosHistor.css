@@ -1,0 +1,30 @@
+.audios-history-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .audio-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .audio-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .audio-item audio {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .audio-name {
+    font-size: 14px;
+    color: #333;
+  }
+  
